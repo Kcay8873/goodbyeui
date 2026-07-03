@@ -1,0 +1,29 @@
+<Application x:Class="GoodbyeUI.App.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             xmlns:conv="clr-namespace:GoodbyeUI.App.Converters">
+    <!-- StartupUri yok: pencere DI ile App.xaml.cs içinde oluşturulur. -->
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ui:ThemesDictionary Theme="Dark" />
+                <ui:ControlsDictionary />
+            </ResourceDictionary.MergedDictionaries>
+
+            <conv:ConnectionStateToBrushConverter x:Key="StateToBrush" />
+            <conv:BooleanToVisibilityConverter x:Key="BoolToVisible" />
+            <conv:BooleanToVisibilityConverter x:Key="BoolToCollapsed" Invert="True" />
+
+            <!--
+                Düz WPF TextBlock'ların rengi varsayılan olarak temaya bağlı DEĞİLDİR (siyah kalır).
+                Bu implicit stil, tüm TextBlock'lara temayla değişen yazı rengini verir; böylece
+                koyu temada yazılar beyaz, açık temada koyu olur. (İçeride açıkça Foreground veren
+                yerler, ör. bağlan butonu, bunu ezip kendi rengini korur.)
+            -->
+            <Style TargetType="{x:Type TextBlock}">
+                <Setter Property="Foreground" Value="{DynamicResource TextFillColorPrimaryBrush}" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

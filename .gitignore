@@ -1,0 +1,39 @@
+# .NET derleme çıktıları
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+publish/
+artifacts/
+
+# Kullanıcı/IDE dosyaları
+*.user
+*.suo
+.vs/
+.idea/
+.vscode/
+*.DotSettings.user
+
+# İşletim sistemi
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# NuGet
+*.nupkg
+
+# Depoya gönderilmeyecek yerel/geliştirici dosyaları
+plan.md
+CLAUDE.md
+
+# Logo kaynak dosyaları (ham tasarım) — dağıtılan .exe zaten ikonu gömdüğü için
+# app.ico depoda KALIR (build gerektirir); yalnızca ham kaynaklar hariç tutulur.
+/GoodbyeUI.png
+/logo.*
+*.psd
+*.ai
+*.xcf
+
+# Not: src/GoodbyeUI.App/Assets/app.ico build için GEREKLİDİR ve depoya dahildir.
+# Not: src/GoodbyeUI.Infrastructure/Assets/goodbyedpi/** altındaki GoodbyeDPI ikili
+# dosyaları gömülü kaynaktır ve bilerek depoya dahildir.

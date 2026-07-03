@@ -1,0 +1,24 @@
+<Project>
+
+  <!--
+    Tüm projeler için ortak MSBuild ayarları.
+    Tek kaynak (DRY): sürüm, dil, nullable vb. burada tanımlanır.
+  -->
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <!-- Sembolleri derlemeye göm: yayın çıktısı tek .exe olur (ayrı .pdb yok). -->
+    <DebugType>embedded</DebugType>
+
+    <!-- Ürün kimliği -->
+    <Product>GoodbyeUI</Product>
+    <Company>Kcay8873</Company>
+    <Authors>Kcay8873</Authors>
+    <Version>1.0.0</Version>
+    <NeutralLanguage>en</NeutralLanguage>
+  </PropertyGroup>
+
+</Project>

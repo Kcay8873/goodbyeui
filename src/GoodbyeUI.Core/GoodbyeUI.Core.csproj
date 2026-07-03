@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Çekirdek katman: saf .NET, hiçbir platform/UI bağımlılığı yok.
+    Yalnızca soyutlamalar (arayüzler) ve modeller barınır. Kolay test edilir.
+  -->
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>

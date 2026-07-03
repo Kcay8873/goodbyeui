@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Altyapı katmanı: Core arayüzlerinin somut, Windows'a özgü implementasyonları.
+    (process yönetimi, ayar kalıcılığı, log, toast, tema, otomatik başlatma)
+  -->
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows10.0.19041.0</TargetFramework>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GoodbyeUI.Core\GoodbyeUI.Core.csproj" />
+  </ItemGroup>
+
+  <!-- Dil sözlükleri derlemeye gömülür (JsonLocalizationService bunları okur). -->
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\Languages\*.json" />
+  </ItemGroup>
+
+  <!-- GoodbyeDPI ikili dosyaları (yalnızca mimari klasörleri) derlemeye gömülür. -->
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\goodbyedpi\x86\*" />
+    <EmbeddedResource Include="Assets\goodbyedpi\x86_64\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.WinUI.Notifications" Version="7.1.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.9" />
+    <PackageReference Include="Serilog" Version="4.3.1" />
+    <PackageReference Include="Serilog.Sinks.Debug" Version="3.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+    <PackageReference Include="TaskScheduler" Version="2.12.2" />
+  </ItemGroup>
+
+</Project>
