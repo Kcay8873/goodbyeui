@@ -5,7 +5,7 @@
 [![.NET](https://img.shields.io/badge/.NET-9-512BD4)](https://dotnet.microsoft.com/)
 [![license](https://img.shields.io/badge/license-MIT-3DA639)](LICENSE)
 
-**İnternet kısıtlamalarını ve yavaşlatmalarını aşan, VPN'lere göre sıfır hız kaybı sunan, Windows 11 tasarımlı tek tıkla çalışan masaüstü uygulaması.**
+**İnternet kısıtlamalarını ve yavaşlatmalarını aşan, VPN'lere göre sıfır hız kaybı sunan, tek tıkla çalışan masaüstü uygulaması.**
 
 ---
 
